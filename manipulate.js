@@ -28,7 +28,7 @@ function runThrough(vorname, vornameLenght, alphaArr) {
 	for (let index = 0; index < vornameLenght; index++) {
 		let  cacheAlpha = vorname.charCodeAt(index) - 97;
 		
-		alphaArr[parseInt(cacheAlpha)] +=1;
+		alphaArr[cacheAlpha] +=1;
 		console.log(alphaArr);
 	}
 	
