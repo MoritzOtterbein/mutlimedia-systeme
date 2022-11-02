@@ -11,22 +11,26 @@ window.onload = function(){
 		let output = document.getElementById("output");
 		vorname = vorname.toLowerCase();
 		let inhalt = vorname.value;
+		//Array zum Buchstaben zählen
 		let alphaArr = [];
 		output.innerHTML = vorname;
-		runThrough(vorname, vornameLenght);
+		runThrough(vorname, vornameLenght, alphaArr);
 		c = vorname.charCodeAt(0)
-		console.log(ceasarKey);
+		
 		
 	}
 
 
 };
-function runThrough(vorname, vornameLenght) {
+function runThrough(vorname, vornameLenght, alphaArr) {
 	
 	console.log(vornameLenght);
 	for (let index = 0; index < vornameLenght-1; index++) {
-		console.log(vorname.charCodeAt(index));
+		let cacheAlpha = vorname.charCodeAt(index) - 97;
+		console.log(cacheAlpha);
+		alphaArr[cacheAlpha] +=1;
 		
+		console.log(alphaArr);
 	}
 	
 }
