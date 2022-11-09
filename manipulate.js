@@ -56,26 +56,29 @@ window.onload = function () {
 
 		}
 
-		findKey = 26 - findKey + 4;
+		findKey = 26 - findKey + 4 ;
 		console.log("Key:" + findKey);
 
 		return findKey;
 	}//catchKey
 	function shiften(entry, key, ascii) {
 		converter(entry, ascii);
-		
+		console.log("Key:" + key);
 		for (let i = 0; i < ascii.length; i++) {
 			// Normalfall Kleinbuchstaben
-			if (ascii[i] + + parseInt(key) < 123 && ascii[i] + parseInt(key) > 96 && ascii[i] <= 97) {
+			if (ascii[i] + parseInt(key) < 123 && ascii[i] + parseInt(key) > 96) {
 				ascii[i] = ascii[i] + parseInt(key); 
+				continue;
 			}else if (ascii[i] + parseInt(key) > 122){ 
-				ascii[i] = (ascii[i] + parseInt(key)) % 122 + 96; //hier fehlt auch der key & beim key muss immer parseInt drum weil sonst wird der nicht als zahl erkannt
+				ascii[i] = ((ascii[i] + parseInt(key)) % 122) + 96; 
+				continue;
 			}
-			else if (ascii[i] + parseInt(key) < 91  && ascii[i] + parseInt(key) > 64){
-				ascii[i] = ascii[i] + parseInt(key); 
-			}else if (ascii[i] + parseInt(key)>= 90) {
-					ascii[i] = (ascii[i] + parseInt(key)) % 90 + 64;
-				}
+			//else if (ascii[i] + parseInt(key) < 91  && ascii[i] + parseInt(key) > 64){
+			//	ascii[i] = ascii[i] + parseInt(key);
+			//}else if (ascii[i] + parseInt(key)>= 90) {
+			//	ascii[i] = (ascii[i] + parseInt(key)) % 90 + 64;
+			
+			//}
 			}
 			console.log(ascii);
 			let ausgabe = String.fromCharCode(...ascii);
