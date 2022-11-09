@@ -1,18 +1,20 @@
 <!doctype html>
 <html>
-
+    
 <head>
-    <title>Lauflängencodierung</title>
-    <script src="bildencoding.js"></script>
+    <title>Canvas</title>
+    
 </head>
 
 <body>
     <form action="frontpage.html">
         <input type="submit" value="Go back to Frontpage" />
     </form>
-    <div class="col-md-6 px-0 text-center d-print-none">
+    <div>
         <canvas class="canvas" id="canvas" width=900 height=300></canvas>
-      </div>
+    </div>
+    <input id="slider" name="slider" type="range" min="0" max="20" step="1.0" value="0">
+    <script src="canvas.js"></script>
 </body>
 
 </html>

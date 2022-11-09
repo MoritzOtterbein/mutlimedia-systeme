@@ -73,16 +73,16 @@ window.onload = function () {
 				ascii[i] = ((ascii[i] + parseInt(key)) % 122) + 96; 
 				continue;
 			}
-			//else if (ascii[i] + parseInt(key) < 91  && ascii[i] + parseInt(key) > 64){
-			//	ascii[i] = ascii[i] + parseInt(key);
-			//}else if (ascii[i] + parseInt(key)>= 90) {
-			//	ascii[i] = (ascii[i] + parseInt(key)) % 90 + 64;
+			else if (ascii[i] + parseInt(key) < 91  && ascii[i] + parseInt(key) > 64 && ascii[i] > 64){
+				ascii[i] = ascii[i] + parseInt(key);
+			}else if (ascii[i] + parseInt(key)>= 90) {
+				ascii[i] = (ascii[i] + parseInt(key)) % 90 + 64;
 			
-			//}
+			}
 			}
 			console.log(ascii);
 			let ausgabe = String.fromCharCode(...ascii);
-		
+			console.log(ascii)
 			return ausgabe; 
 		} //shiften
 		

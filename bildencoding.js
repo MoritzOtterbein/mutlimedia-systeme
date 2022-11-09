@@ -1,4 +1,5 @@
-function runLengthEncode() {
+window.onload = function () {
+document.getElementById("myButton").onclick = function () {
     const input = document.getElementById("fileInput");
     const reader = new FileReader();
     reader.onload = function () {
@@ -26,4 +27,5 @@ function runLengthEncode() {
         img.src = reader.result;
     };
     reader.readAsDataURL(input.files[0]);
+}
 }
