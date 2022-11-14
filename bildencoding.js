@@ -28,4 +28,13 @@ document.getElementById("myButton").onclick = function () {
     };
     reader.readAsDataURL(input.files[0]);
 }
+function runthrough(canvas,greyscale_arr) {
+    for (let i = 0; i < greyscale_arr.length; i++) {
+        while () {
+            
+        }
+        
+    }
+    
+}
 }
